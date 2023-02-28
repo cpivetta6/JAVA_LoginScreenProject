@@ -27,6 +27,7 @@ body{
 	border-radius: 10px;
 }
 
+
 .login-box h2{
 	margin: 0 0 30px;
 	padding: 0;
@@ -62,12 +63,28 @@ body{
 }
 
 .login-box .user-box input:focus ~ label,
-.login-box .user-box input:valid ~ label{
+.login-box .user-box input:valid ~ label,
+.login-box .user-box input:hover ~ label{
 	top: -20px;
 	left: 0;
 	color: #03e9f4;
 	font-size: 12px;
+	background-color: transparent !important;
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 
 .login-box form a, .login-box form button{
 	position: relative;
