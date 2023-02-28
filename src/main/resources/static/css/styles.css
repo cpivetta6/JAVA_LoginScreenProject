@@ -7,8 +7,9 @@ body{
 	padding: 0;
 	font-family: sans-serif;
 	background: linear-gradient(#141e30, #243b55);
-	/*background: url("ocean.png");
-	background-size: cover;*/
+	
+	background: url("/images/ocean.png");
+	background-size: cover;
 	
 	
 }
@@ -86,6 +87,7 @@ body{
 button{
 	background: transparent;
 	border: none;
+	top: -13px;
 }
 
 .register-page-buttom{
@@ -113,6 +115,10 @@ button{
 
 .register-page-buttom{
 	margin: 80px;
+}
+
+.personal-page-buttom{
+	right: -10px;
 }
 
 /*

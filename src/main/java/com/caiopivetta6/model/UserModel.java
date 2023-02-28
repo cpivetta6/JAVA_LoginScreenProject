@@ -3,24 +3,34 @@ package com.caiopivetta6.model;
 import java.io.Serializable;
 import java.util.Objects;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
-public class User implements Serializable{
+@Entity
+public class UserModel implements Serializable{
 	
 	
 	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	private String login;
 	private String firstName;
 	private String lastName;
 	private String email;
 	private String password;
 	
-	public User() {
+	public UserModel() {
 		
 	}
 
-	public User(Integer id, String firstName, String lastName, String email, String password) {
+	public UserModel(Integer id, String login,  String firstName, String lastName, String email, String password) {
 		super();
 		this.id = id;
+		this.login = login;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
@@ -28,6 +38,16 @@ public class User implements Serializable{
 	}
 	
 	
+	
+	
+
+	public String getLogin() {
+		return login;
+	}
+
+	public void setLogin(String login) {
+		this.login = login;
+	}
 
 	public Integer getId() {
 		return id;
@@ -82,7 +102,7 @@ public class User implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		User other = (User) obj;
+		UserModel other = (UserModel) obj;
 		return Objects.equals(id, other.id);
 	}
 

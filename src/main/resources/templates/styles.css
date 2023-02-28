@@ -68,7 +68,7 @@ body{
 	font-size: 12px;
 }
 
-.login-box form a button{
+.login-box form a, .login-box form button{
 	position: relative;
 	display: inline-block;
 	padding: 10px 20px;
@@ -83,8 +83,17 @@ body{
 	letter-spacing: 4px;
 }
 
+button{
+	background: transparent;
+	border: none;
+	top: -13px;
+}
 
-.login-box a button:hover{
+.register-page-buttom{
+	margin-right: 50px;
+}
+
+.login-box a:hover, .login-box button:hover {
 	background: #03e9f4;
 	color: #fff;
 	border-radius: 5px;
@@ -96,13 +105,19 @@ body{
 }
 
 
-.login-box a span button{
+.login-box a span, .login-box button span{
 	position: absolute;
 	display: block;
 }
 
+
+
 .register-page-buttom{
-	margin: 60px;
+	margin: 80px;
+}
+
+.personal-page-buttom{
+	right: -10px;
 }
 
 /*
